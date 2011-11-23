@@ -21,6 +21,7 @@ if [[ $PV != 9999* ]]; then
 fi
 
 EGIT_REPO_URI="git://scm.gforge.inria.fr/coq/coq-svn.git"
+EGIT_BRANCH=trunk
 
 LICENSE="LGPL-2.1"
 SLOT="0"
@@ -53,7 +54,8 @@ src_configure() {
 		--coqdocdir /usr/$(get_libdir)/coq/coqdoc
 		--docdir /usr/share/doc/${PF}
 		--camlp5dir ${ocaml_lib}/camlp5
-		--lablgtkdir ${ocaml_lib}/lablgtk2"
+		--lablgtkdir ${ocaml_lib}/lablgtk2
+		--configdir /etc/xdg/coq"
 
 	use debug && myconf="--debug $myconf"
 	use doc || myconf="$myconf --with-doc no"
