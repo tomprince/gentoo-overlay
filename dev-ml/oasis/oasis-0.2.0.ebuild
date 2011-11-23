@@ -25,7 +25,7 @@ RDEPEND=">=dev-lang/ocaml-3.10.2[ocamlopt?]
 	dev-ml/findlib[ocamlopt?]
 	dev-ml/ocaml-data-notation[ocamlopt?]
 	dev-ml/ocamlify"
-RDEPEND="${DEPEND}"
+DEPEND="${DEPEND}"
 
 export STRIP_MASK="*/bin/*"
 
