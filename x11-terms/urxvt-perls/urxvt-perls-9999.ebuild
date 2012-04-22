@@ -19,16 +19,13 @@ DEPEND="x11-terms/rxvt-unicode[perl]"
 RDEPEND="${DEPEND}
 	x11-misc/xclip"
 
-src_compile ()
-{
-	: # nothing to do
-}
+src_compile () { :; }
 
 src_install ()
 {
 	insinto /usr/$(get_libdir)/urxvt/perl
-	doins url-select || die
-	doins clipboard || die
-	doins keyboard-select || die
-	dodoc README.md || die
+	doins url-select
+	doins clipboard
+	doins keyboard-select
+	dodoc README.md
 }
