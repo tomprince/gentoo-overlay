@@ -1,0 +1,24 @@
+diff --git a/setup.py b/setup.py
+index be1dbb5..5fab3fc 100644
+--- a/setup.py
++++ b/setup.py
+@@ -11,11 +11,6 @@ else:
+   from distutils.core import setup
+   setup_kwargs = dict()
+ 
+-
+-storage_dirs = [ ('storage/whisper',[]), ('storage/lists',[]),
+-                 ('storage/log',[]), ('storage/rrd',[]) ]
+-conf_files = [ ('conf', glob('conf/*.example')) ]
+-
+ setup(
+   name='carbon',
+   version='0.9.9',
+@@ -28,7 +23,6 @@ setup(
+   package_dir={'' : 'lib'},
+   scripts=glob('bin/*'),
+   package_data={ 'carbon' : ['*.xml'] },
+-  data_files=storage_dirs + conf_files,
+   install_requires=['twisted', 'txamqp'],
+   **setup_kwargs
+ )
